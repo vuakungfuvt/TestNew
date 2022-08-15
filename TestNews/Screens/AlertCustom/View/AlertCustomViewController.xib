@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+        <array key="NunitoSans-SemiBold.ttf">
+            <string>NunitoSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertCustomViewController" customModule="TestNABWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="btnOK" destination="Wxu-R3-Zpe" id="Kgr-df-5kj"/>
+                <outlet property="lblContent" destination="W4m-6f-Mbb" id="p9b-lU-nC2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="widthContentViewConstraint" destination="0bX-e1-g6U" id="9T7-dg-330"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-pS-nyY">
+                    <rect key="frame" x="57" y="348" width="300" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqs-mK-9Ik">
+                            <rect key="frame" x="131.5" y="10" width="37" height="22"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-6f-Mbb">
+                            <rect key="frame" x="20" y="52" width="260" height="19.5"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-R3-Zpe">
+                            <rect key="frame" x="116.5" y="146" width="67" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="67" id="aUp-Bc-Hd6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnOKTouchUpInside:" destination="-1" eventType="touchUpInside" id="6tv-wr-G2E"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="0bX-e1-g6U"/>
+                        <constraint firstItem="Wxu-R3-Zpe" firstAttribute="centerX" secondItem="gwn-pS-nyY" secondAttribute="centerX" id="CvE-hN-WtE"/>
+                        <constraint firstAttribute="bottom" secondItem="Wxu-R3-Zpe" secondAttribute="bottom" constant="20" id="G4G-lV-1g1"/>
+                        <constraint firstItem="W4m-6f-Mbb" firstAttribute="top" secondItem="vqs-mK-9Ik" secondAttribute="bottom" constant="20" id="KCr-di-nKu"/>
+                        <constraint firstItem="vqs-mK-9Ik" firstAttribute="centerX" secondItem="gwn-pS-nyY" secondAttribute="centerX" id="cQM-Fy-wX3"/>
+                        <constraint firstAttribute="trailing" secondItem="W4m-6f-Mbb" secondAttribute="trailing" constant="20" id="mdM-1B-Nok"/>
+                        <constraint firstAttribute="width" secondItem="gwn-pS-nyY" secondAttribute="height" multiplier="3:2" id="sMd-dw-G0S"/>
+                        <constraint firstItem="vqs-mK-9Ik" firstAttribute="top" secondItem="gwn-pS-nyY" secondAttribute="top" constant="10" id="uPW-wl-EBf"/>
+                        <constraint firstItem="W4m-6f-Mbb" firstAttribute="leading" secondItem="gwn-pS-nyY" secondAttribute="leading" constant="20" id="ub9-yi-dG7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="viewAlert"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gwn-pS-nyY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D1G-jf-TSo"/>
+                <constraint firstItem="gwn-pS-nyY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z9i-qz-Nfb"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
