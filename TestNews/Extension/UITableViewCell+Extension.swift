@@ -7,8 +7,7 @@
 
 import UIKit
 
-// MARK: - UITableViewCell
-protocol XibTableViewCell {
+// MARK: - UITableViewCellqq
     static var name: String { get }
     static func registerCellTo(tableView: UITableView)
     static func reusableCellFor(tableView: UITableView, at indexPath: IndexPath) -> Self?

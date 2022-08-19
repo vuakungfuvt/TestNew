@@ -85,6 +85,10 @@ class MainNewsViewController: UIViewController, XibViewController {
     }
     
     @objc func searchArticle() {
+        guard searchedString.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 else {
+            self.tableView.pauseRefressh()
+            return
+        }
         self.showLoading()
         viewModel.searchArticle(name: searchedString) { [weak self] _ in
             self?.hideLoading()
@@ -92,6 +96,9 @@ class MainNewsViewController: UIViewController, XibViewController {
                 self?.tableView.pauseRefressh()
             }
         } failure: { [weak self] error in
+            DispatchQueue.main.async {
+                self?.tableView.pauseRefressh()
+            }
             self?.hideLoading()
         }
     }

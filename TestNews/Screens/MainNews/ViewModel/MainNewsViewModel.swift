@@ -27,6 +27,7 @@ class MainNewsViewModel: NSObject {
         guard let articles = self.getArticles() else {
             return
         }
+        self.articles = articles
         self.loadCellViewModels(articles: articles)
     }
     

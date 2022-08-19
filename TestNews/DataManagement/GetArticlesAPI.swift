@@ -15,7 +15,10 @@ class GetArticlesAPI: DataAdapter {
     
     func searchArticles(name: String, success: @escaping ([Article]) -> Void, failure: (Error) -> Void) {
         let urlString = "https://newsapi.org/v2/everything?q=\(name)&from=\(Date().toString(withFormat: "yyyy-MM-dd"))&sortBy=publishedAt&apiKey=77e71618cbc945c5adb2fc6e2d727e71"
-        let resourceURL = URL(string: urlString)!
+        guard let resourceURL = URL(string: urlString) else {
+            failure(NSError(domain: "URL not found", code: 404))
+            return
+        }
         
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
             

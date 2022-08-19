@@ -44,7 +44,7 @@ class AlertCustomViewController: UIViewController, XibViewController {
         lblContent.text = viewModel.content
     }
 
-    // MARK:  Actions
+    // MARK: - Actions
     
     @IBAction func btnOKTouchUpInside(_ sender: Any) {
         self.view.layoutIfNeeded()
