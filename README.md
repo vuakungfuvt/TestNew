@@ -27,13 +27,14 @@ Follow by SOLID (define the protocol to init ViewController followed by MVVM str
 
 <img src= "images/structure.png" width="400" >
 - [x] TestLogic.playground: Test Logic Paty 1.
+
 - [x] Utils: Some common functions.
         +Constant.swift: Store some constant
+        
 - [x] Font: Folder of font source
+
 - [x] Service: Networking service.
-        +RequestBuilder.swift, SessionBuilder.swift: Store some protocol to define the full api resful service.
-        +Networkingable: The typealias of request and responsed file
-        +When calling 1 api, we will define in Operation folder and implement BaseOperation<GenericModelType>, inside each file we have the method, parameters and the response type.
+
 - [x] Screens: ViewController followed by MVVM.
 
 <img src= "images/mvvm.jpeg" width="400" >
@@ -56,24 +57,24 @@ Follow by SOLID (define the protocol to init ViewController followed by MVVM str
 
 [ESPullToRefresh](https://github.com/eggswift/pull-to-refresh): Pull to refresh of UITableView.
 
-[IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager): handle keyboard event
-
-## How to run this project
-
--  Download this project from develop branch and run, to change some config, go to setting screen from setting button in the top of uinavigation bar.
--  To check Error handle, change value from 30 to 0.1 in SessionBuilder file a below:
-        config.timeoutIntervalForRequest = 0.1
-        config.timeoutIntervalForResource = 0.1
+[IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager): handle keyboard events
         
 ## Checklist
         
 - [x] Programming language: Swift is required, Objective-C is optional.
+
 - [x] Design app's architecture (recommend VIPER or MVP, MVVM but not mandatory)
+
 - [x] UI should be looks like in attachment.
+
 - [x] Write UnitTests
+
 - [x] Acceptance Tests
+
 - [x] Exception handling
+
 - [x] Caching handling
+
 - [x] Code Logic test
 
 
@@ -117,7 +118,7 @@ We would love you for the contribution of my code to be more clear in the future
 
 Your Name – [@TungPhan](https://www.facebook.com/tung.teotop/) – phanthanhtung.pt@gmail.com
 
-[https://github.com/vuakungfuvt/TestNABWeather](https://github.com/vuakungfuvt/TestNABWeather)
+[https://github.com/vuakungfuvt/TestNew](https://github.com/vuakungfuvt/TestNABWeather)
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
